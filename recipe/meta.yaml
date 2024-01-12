@@ -1,5 +1,5 @@
 {% set name = "seqdat" %}
-{% set version = "0.1.10" %}
+{% set version = "2024.1008" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/seqdat-{{ version }}.tar.gz
-  sha256: aeefb6dab19b9beecf5b62584712e59f76f851111e77265d4128e5475f583c3e
+  sha256: f954cdd9ae66291f36770f645f1c50e35cc4adc80594a248eb09e9828b38fdcf
 
 build:
   number: 0
