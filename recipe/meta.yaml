@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - poetry
+    - pdm-backend
   run:
     - python >=3.8
     - click >=8.0.3,<9.0.0
