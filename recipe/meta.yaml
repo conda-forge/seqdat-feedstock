@@ -1,5 +1,5 @@
 {% set name = "seqdat" %}
-{% set version = "0.1.10" %}
+{% set version = "2024.1008" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/seqdat-{{ version }}.tar.gz
-  sha256: aeefb6dab19b9beecf5b62584712e59f76f851111e77265d4128e5475f583c3e
+  sha256: f954cdd9ae66291f36770f645f1c50e35cc4adc80594a248eb09e9828b38fdcf
 
 build:
   number: 0
@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<3.11
-    - poetry
+    - python >=3.8
+    - pdm-backend
   run:
+    - python >=3.8
     - click >=8.0.3,<9.0.0
     - click-rich-help >=0.2.0
-    - python >=3.6,<3.11
-    - rich >=10.12.0,<11.0.0
-    - ruamel.yaml >=0.17.17,<0.18.0
+    - rich >=10.12.0
+    - tomlkit >=0.10.1
 
 test:
   imports:
