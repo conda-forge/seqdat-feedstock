@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/seqdat-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/seqdat-{{ version }}.tar.gz
   sha256: f954cdd9ae66291f36770f645f1c50e35cc4adc80594a248eb09e9828b38fdcf
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - seqdat = seqdat.cli:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - pdm-backend
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - click >=8.0.3,<9.0.0
     - click-rich-help >=0.2.0
     - rich >=10.12.0
@@ -37,6 +37,7 @@ test:
     - seqdat --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/daylinmorgan/seqdat
